@@ -3,7 +3,7 @@
 </script>
 
 <template>
-   <div>sdsd</div>
+   <div>66</div>
 </template>
 
 <style scoped>

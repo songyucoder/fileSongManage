@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "element-plus": "^2.4.4",
+    "html2canvas": "^1.4.1",
     "vue": "^3.3.11"
   },
   "devDependencies": {
