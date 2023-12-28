@@ -10,7 +10,7 @@ import {
   putFileNameApi
 } from '../api/index'
 
-export const groud_data = async (data) => {
+export const groud_data = async (data:any) => {
   const res = await getFileGroupApi(data)
   return res.data
 }
@@ -24,7 +24,7 @@ export const updateGroupName = async (id: number | string, data: any) => {
   }
 }
 // 添加分组事件
-export const addGroudEvent = async (data) => {
+export const addGroudEvent = async (data:any) => {
   const res = (await addFileGroupApi(data)) as any
   if (res.code == 0) {
     return true
@@ -46,7 +46,7 @@ export const deleGroupEvent = async (id: number | string, data: any) => {
 // 对文件进行操作api
 
 // 获取文件列表
-export const getrRightFileListEvent = async (data) => {
+export const getrRightFileListEvent = async (data:any) => {
   const res = (await getrRightFileListApi(data)) as any
   return res.data
 }
@@ -69,7 +69,7 @@ export function postUpload (file) {
 }
 注意 :请求都是封装好的，重点就是需要加请求头： headers：{ ‘Content-Type’: ‘multipart/form-data’ }
 */
-export const postUploadFileApitEvent = async (data) => {
+export const postUploadFileApitEvent = async (data:any) => {
   const res = (await postFileApi(data)) as any
   return res
 }

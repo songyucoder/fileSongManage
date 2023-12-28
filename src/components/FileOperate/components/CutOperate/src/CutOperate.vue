@@ -25,7 +25,7 @@ const props = defineProps({
   }
 })
 console.log(props.fileobj)
-const onSave = (res) => {
+const onSave = (res: any) => {
   console.log(res)
   emit('save', res)
   if (typeof res === 'string') {

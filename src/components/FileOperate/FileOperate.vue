@@ -43,9 +43,9 @@ import {
   putFileNameEvent,
   moveFileEvent
 } from './model/data'
-import { CutOperate } from '../CutOperate'
-import { UploadFile } from '../UploadFile'
-import { WaterMark } from '../WaterMark'
+import { CutOperate } from './components/CutOperate'
+import { UploadFile } from './components/UploadFile'
+import { WaterMark } from './components/WaterMark'
 const props = defineProps({
   typeobj: {
     type: Object,
