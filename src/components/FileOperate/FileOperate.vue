@@ -531,8 +531,8 @@ defineExpose({ selectRowsDataExportEvent, tableData })
 </script>
 <template>
   <div class="flex row">
-    <div class="w-20%">
-      <div class="ml-3 mr-3">
+    <div class="w-20% flex">
+      <div class="ml-3 mr-3 flex" >
         <el-input v-model="nameGroupSearch" class="w-40" placeholder="请输入分组名称" size="large">
           <template #suffix>
             <!--   vue3图标使用方式  -->
@@ -567,10 +567,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
           <div class="ml-1">全部{{ props.typeobj.label }}</div>
         </div>
         <div class="flex row">
-          <ElIcon size="17" @click="clickGroudEvent('add', {
-id: 0,
-name: ''
-})">
+          <ElIcon size="17" @click="clickGroudEvent('add', {id: 0,name: ''})">
             <svg
               style="color: #105cfb"
               viewBox="0 0 1024 1024"

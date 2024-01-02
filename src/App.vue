@@ -10,7 +10,7 @@ const typeObj = {
 </script>
 
 <template>
-   <div style="display: flex;">
+   <div class="flex">
       <FileOperate :typeobj="typeObj"></FileOperate>
    </div>
 </template>
