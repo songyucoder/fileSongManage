@@ -530,9 +530,9 @@ const onCutCancel = () => {
 defineExpose({ selectRowsDataExportEvent, tableData })
 </script>
 <template>
-  <div class="flex row">
-    <div class="w-20% flex">
-      <div class="ml-3 mr-3 flex" >
+  <div class="s-row"  style="width: 100%;">
+    <div class="s-column"  style="width: 20%;">
+      <div class="ml-3 mr-3 s-flex" >
         <el-input v-model="nameGroupSearch" class="w-40" placeholder="请输入分组名称" size="large">
           <template #suffix>
             <!--   vue3图标使用方式  -->
@@ -547,13 +547,13 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             </ElIcon>
           </template> </el-input
       ></div>
-      <div class="text-3 m-3">分组列表</div>
+      <div style="margin: 15px;">分组列表</div>
       <div
-        class="h-9 pl-1 pr-1 items-center flex"
-        style="justify-content: space-between; font-size: 15px"
+        class="s-flex s-items-center"
+        style="justify-content: space-between; font-size: 15px;height: 40px;padding: 5px;"
         :style="{ 'background-color': is_dark ? '#000' : '' }"
       >
-        <div class="flex items-center" @click="clickAllGroupEvent">
+        <div class="s-flex s-items-center" @click="clickAllGroupEvent">
           <ElIcon v-if="is_allBtn" size="17">
             <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" data-v-ea893728="">
               <path fill="currentColor" d="m192 384 320 384 320-384z" />
@@ -701,12 +701,12 @@ defineExpose({ selectRowsDataExportEvent, tableData })
         </el-tree>
       </div>
     </div>
-    <div class="w-80% flex" style="flex-direction: column">
-      <div class="flex justify-between w-100%">
+    <div class="s-flex" style="flex-direction: column;width: 80%;">
+      <div class="s-flex s-justify-between">
         <ElButton class="ml-3" type="primary" @click="clickUploadRightEvent()"
           >上传{{ props.typeobj.label }}</ElButton
         >
-        <div class="flex row items-center flex-end">
+        <div class="s-row s-items-center">
           <div class="text-4">上传时间：</div>
           <div>
             <el-date-picker
@@ -745,9 +745,9 @@ defineExpose({ selectRowsDataExportEvent, tableData })
           <ElButton type="primary" class="ml-2" @click="resetSearchEvent()">重置</ElButton>
         </div>
       </div>
-      <div class="flex justify-between w-100% items-center mt-5">
+      <div class="s-flex s-justify-between w-100% s-items-center mt-5">
         <div class="ml-3 text-3">素材总量：{{ total }}</div>
-        <div class="flex row items-center">
+        <div class="s-row s-items-center">
           <el-select
             class="w-39 selectInput"
             v-model="fileSearchSelectValue"
@@ -769,7 +769,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
         </div>
       </div>
       <!-- 文件类型 -->
-      <div class="h-120 flex" style="flex-direction: column">
+      <div class="h-120 s-flex" style="flex-direction: column">
         <div v-if="is_row">
           <el-table
             height="440"
@@ -783,9 +783,9 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             <el-table-column type="selection" width="55" />
             <el-table-column :label="props.typeobj.label">
               <template #default="scope">
-                <div class="flex row mt-1">
+                <div class="s-row mt-1">
                   <div
-                    class="flex items-center"
+                    class="s-flex s-items-center"
                     style="justify-content: center; height: 50px"
                     :style="{
                       width:
@@ -824,10 +824,10 @@ defineExpose({ selectRowsDataExportEvent, tableData })
                       </svg>
                     </ElIcon>
                   </div>
-                  <div class="flex ml-3" style="flex-direction: column; justify-content: center">
-                    <div class="flex row">
+                  <div class="s-flex ml-3" style="flex-direction: column; justify-content: center">
+                    <div class="s-row">
                       <div style="font-size: 15px">{{ scope.row.alias_name }}</div>
-                      <div class="w-4 h-6 ml-1 flex" @click="fileNameEidt(scope.row)"
+                      <div class="w-4 h-6 ml-1 s-flex" @click="fileNameEidt(scope.row)"
                         ><svg
                           style="color: #999"
                           viewBox="0 0 1024 1024"
@@ -863,14 +863,14 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             <el-table-column property="author" label="上传者" width="100" show-overflow-tooltip />
             <el-table-column label="操作" width="230">
               <template #default="scope"
-                ><div class="flex row">
+                ><div class="s-row">
                   <div
                     v-for="(item, index) in operate_Btn_Arr"
                     :key="index"
-                    class="flex items-center"
+                    class="s-flex s-items-center"
                     style="width: 40px"
                   >
-                    <div v-if="item.value == 'edit'" class="flex items-center">
+                    <div v-if="item.value == 'edit'" class="s-flex s-items-center">
                       <el-dropdown>
                         <span style="color: #409eff">
                           {{ item.keyStr }}
@@ -901,14 +901,14 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             </el-table-column>
           </el-table>
         </div>
-        <div v-else class="flex-1 flex ml-2" style="flex-wrap: wrap">
+        <div v-else class="s-flex ml-2" style="flex-wrap: wrap;flex: 1;">
           <div
-            class="flex p-2"
+            class="s-flex p-2"
             style="width: 120px; height: 130px; flex-direction: column"
             v-for="(item, index) in tableData"
             :key="index"
           >
-            <div class="flex flex-1 items-center" style="justify-content: center"
+            <div class="s-flex  s-items-center" style="justify-content: center;flex: 1;"
               ><img
                 style="max-width: 120px; max-height: 100px"
                 :src="denImgChangePreview(props.typeobj.name, item)"
@@ -939,8 +939,8 @@ defineExpose({ selectRowsDataExportEvent, tableData })
               </ElIcon>
             </div>
             <div style="height: 30px">
-              <div class="flex-2 flex row items-center">
-                <div class="flex flex-2"
+              <div class=" s-row s-items-center" style="flex:2">
+                <div class="s-flex" style="flex:2"
                   ><el-checkbox
                     :checked="item.is_checked"
                     @click="item.is_checked = !item.is_checked"
@@ -949,7 +949,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
                 <div class="ml-1 text-cute">{{ item.alias_name }}</div>
                 <div
                   v-if="props.typeobj.name == 'images'"
-                  class="w-4 h-6 ml-1 flex flex-1"
+                  class="w-4 h-6 ml-1 s-flex flex-1"
                   @click="fileNameEidt(item)"
                   ><svg
                     style="color: #999"
@@ -966,7 +966,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
               <div class="flex justify-between" style="font-size: 12px; color: #999">
                 <div
                   v-if="props.typeobj.name != 'images'"
-                  class="w-4 h-4 ml-1 flex flex-1"
+                  class="w-4 h-4 ml-1 s-flex flex-1"
                   @click="fileNameEidt(item)"
                   ><svg
                     style="color: #999"
@@ -986,9 +986,9 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             </div>
           </div>
         </div>
-        <div class="flex row flex-2">
-          <div class="flex ml-2 mt-2 justify-between" style="width: 100%">
-            <div class="flex row items-center">
+        <div class="s-row" style="flex:2">
+          <div class="s-flex ml-2 mt-2 s-justify-between" style="width: 100%">
+            <div class="s-row s-items-center">
               <div class="text-3">已选 {{ getSelectRow() }}/{{ total }}</div>
               <ElButton class="ml-2" type="danger" @click="clickAllSelectOpearateEvent('dele')"
                 >批量删除</ElButton
@@ -1043,7 +1043,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
     </el-dialog>
     <!-- 进行分组选择 -->
     <el-dialog class="pt-5 pl-5 pr-5" width="20%" v-model="is_clickMoveGroup" title="选择分组">
-      <div class="flex">
+      <div class="s-flex">
         <el-tree
           :data="[...group_Obj.public, ...group_Obj.list]"
           node-key="id"
@@ -1053,7 +1053,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
           <template #default="{ data }">
             <span class="custom-tree-node">
               <div
-                class="flex"
+                class="s-flex"
                 style="justify-content: space-between; width: 100%"
                 @click="moveGroupObj.group_id = data.id"
               >
@@ -1072,7 +1072,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
       </template>
     </el-dialog>
     <el-dialog class="pt-5 pl-5 pr-5" v-model="is_clickIMG" :title="select_RightObj.alias_name">
-      <div class="flex items-center" style="justify-content: center">
+      <div class="s-flex s-items-center" style="justify-content: center">
         <img
           v-if="select_RightObj.extension == 'images'"
           style="max-width: 100%"
@@ -1094,7 +1094,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
     </el-dialog>
 
     <el-dialog class="pt-5 pl-5 pr-5" v-model="is_waterMark" title="品乐家水印操作台">
-      <div class="flex items-center" style="justify-content: center">
+      <div class="s-flex s-items-center" style="justify-content: center">
         <WaterMark ref="WaterMarkRef" :fileobj="select_RightObj" />
       </div>
       <template #footer>
@@ -1107,6 +1107,26 @@ defineExpose({ selectRowsDataExportEvent, tableData })
   </div>
 </template>
 <style lang="less" scoped>
+
+.s-flex{
+  display: flex;
+}
+.s-row{
+  display: flex;
+  flex-direction: row;
+}
+.s-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.s-items-center{
+  align-items: center;
+}
+.s-justify-between{
+  justify-content: space-between;
+}
+
 .selectInput :deep(.el-input) {
   --el-input-focus-border: transparent;
   --el-input-transparent-border: 0 0 0 0px;
