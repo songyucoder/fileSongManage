@@ -28916,7 +28916,7 @@ const f6 = { class: "wrapper" }, p6 = {
       }, 8, ["model"])
     ]));
   }
-}), m6 = /* @__PURE__ */ Jl(B6, [["__scopeId", "data-v-57420042"]]), RA = (e) => (Qc("data-v-8c9c32ed"), e = e(), Fc(), e), w6 = {
+}), m6 = /* @__PURE__ */ Jl(B6, [["__scopeId", "data-v-57420042"]]), RA = (e) => (Qc("data-v-ee72a538"), e = e(), Fc(), e), w6 = {
   class: "s-row",
   style: { width: "100%" }
 }, y6 = { class: "ml-3 mr-3 s-flex" }, C6 = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("svg", {
@@ -28966,7 +28966,7 @@ const f6 = { class: "wrapper" }, p6 = {
   M6
 ], x6 = { class: "text-3 ml-2" }, L6 = { key: 0 }, O6 = ["onClick"], k6 = {
   class: "flex",
-  style: { "justify-content": "space-between", width: "100%" }
+  style: { "justify-content": "space-between", width: "100", "background-color": "transparent" }
 }, D6 = { key: 1 }, N6 = ["onMouseover", "onClick"], _6 = { key: 0 }, K6 = {
   style: { color: "#105cfb" },
   viewBox: "0 0 1024 1024",
@@ -29000,7 +29000,7 @@ const f6 = { class: "wrapper" }, p6 = {
 }, X6 = {
   class: "s-flex",
   style: { "flex-direction": "column", width: "80%", "padding-left": "10px" }
-}, J6 = { class: "s-flex s-justify-between" }, q6 = { class: "s-row s-items-center" }, Z6 = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("div", { class: "text-4" }, "上传时间：", -1)), e$ = { class: "ml-3" }, A$ = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("svg", {
+}, J6 = { class: "s-flex s-justify-between" }, q6 = { class: "s-row s-items-center" }, Z6 = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("div", { class: "text-4" }, "上传时间：", -1)), e$ = { style: { "margin-left": "10px" } }, A$ = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("svg", {
   viewBox: "0 0 1024 1024",
   xmlns: "http://www.w3.org/2000/svg",
   "data-v-ea893728": ""
@@ -29009,9 +29009,12 @@ const f6 = { class: "wrapper" }, p6 = {
     fill: "currentColor",
     d: "m795.904 750.72 124.992 124.928a32 32 0 0 1-45.248 45.248L750.656 795.904a416 416 0 1 1 45.248-45.248zM480 832a352 352 0 1 0 0-704 352 352 0 0 0 0 704z"
   })
-], -1)), t$ = { class: "s-flex s-justify-between w-100% s-items-center mt-5" }, n$ = { class: "ml-3 text-3" }, r$ = { class: "s-row s-items-center" }, o$ = {
+], -1)), t$ = {
+  class: "s-flex s-justify-between w-100% s-items-center",
+  style: { "margin-top": "5px" }
+}, n$ = { class: "ml-3 text-3" }, r$ = { class: "s-row s-items-center" }, o$ = {
   class: "h-120 s-flex",
-  style: { "flex-direction": "column" }
+  style: { "flex-direction": "column", "margin-top": "8px" }
 }, a$ = { key: 0 }, s$ = { class: "s-row mt-1" }, l$ = ["src", "onClick"], i$ = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("svg", {
   t: "1701416335737",
   class: "icon",
@@ -29101,8 +29104,8 @@ const f6 = { class: "wrapper" }, p6 = {
   class: "s-row",
   style: { flex: "2" }
 }, _$ = {
-  class: "s-flex ml-2 mt-2 s-justify-between",
-  style: { width: "100%" }
+  class: "s-flex s-justify-between",
+  style: { width: "100%", "margin-left": "10px", "margin-top": "10px" }
 }, K$ = { class: "s-row s-items-center" }, R$ = { class: "text-3" }, P$ = { class: "dialog-footer" }, $$ = { class: "s-flex" }, V$ = { class: "custom-tree-node" }, z$ = ["onClick"], G$ = { class: "dialog-footer" }, j$ = {
   class: "s-flex s-items-center",
   style: { "justify-content": "center" }
@@ -29353,7 +29356,7 @@ const f6 = { class: "wrapper" }, p6 = {
           b6,
           D("div", {
             class: "s-flex s-items-center",
-            style: ke([{ "justify-content": "space-between", "font-size": "15px", height: "40px", padding: "5px" }, { "background-color": i(dl) ? "#000" : "#fff" }])
+            style: ke([{ "justify-content": "space-between", "font-size": "15px", height: "32px", padding: "5px" }, { "background-color": i(dl) ? "#000" : "#fff" }])
           }, [
             D("div", {
               class: "s-flex s-items-center",
@@ -29575,7 +29578,7 @@ const f6 = { class: "wrapper" }, p6 = {
               ]),
               j(i(FA), {
                 type: "primary",
-                class: "ml-2",
+                style: { "margin-left": "10px" },
                 onClick: Y[6] || (Y[6] = (fe) => Ae())
               }, {
                 default: W(() => [
@@ -29828,7 +29831,7 @@ const f6 = { class: "wrapper" }, p6 = {
                 D("div", K$, [
                   D("div", R$, "已选 " + we(EA()) + "/" + we(m.value), 1),
                   j(i(FA), {
-                    class: "ml-2",
+                    style: { "margin-left": "5px" },
                     type: "danger",
                     onClick: Y[9] || (Y[9] = (fe) => y("dele"))
                   }, {
@@ -30051,7 +30054,7 @@ const f6 = { class: "wrapper" }, p6 = {
       ]);
     };
   }
-}), e5 = /* @__PURE__ */ Jl(Z$, [["__scopeId", "data-v-8c9c32ed"]]), wc = {
+}), e5 = /* @__PURE__ */ Jl(Z$, [["__scopeId", "data-v-ee72a538"]]), wc = {
   FileOperate: e5
 };
 function A5(e) {
