@@ -1,0 +1,12 @@
+{
+  "name": "file-operate-ui",
+  "version": "1.0.0",
+  "description": "文件管理组件上传",
+  "main": "file-operate-ui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["file","element plus","file-operate-ui"],
+  "author": "songyucoder",
+  "license": "ISC"
+}

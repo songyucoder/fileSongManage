@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { FileOperate } from './components/FileOperate'
 const typeObj = {
     label: '图片',
     name: 'images',
@@ -10,8 +9,8 @@ const typeObj = {
 </script>
 
 <template>
-   <div style="width: 1080px;">
-      <FileOperate :typeobj="typeObj"></FileOperate>
+   <div style="width: 1200px;display: flex;">
+      <FileOperate  :typeobj="typeObj"/>
    </div>
 </template>
 

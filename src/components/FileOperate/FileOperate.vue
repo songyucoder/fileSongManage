@@ -531,8 +531,9 @@ defineExpose({ selectRowsDataExportEvent, tableData })
 </script>
 <template>
   <div class="s-row"  style="width: 100%;">
-    <div class="s-column"  style="width: 20%;">
-      <div class="ml-3 mr-3 s-flex" >
+    <div class="s-column"  style="width: 20%;border-style: solid;border-width: 0.3px;padding: 15px;"
+    :style="{ 'border-color': is_dark ? '#444' : '#e0e0e0' }">
+      <div class="ml-3 mr-3 s-flex">
         <el-input v-model="nameGroupSearch" class="w-40" placeholder="请输入分组名称" size="large">
           <template #suffix>
             <!--   vue3图标使用方式  -->
@@ -547,11 +548,11 @@ defineExpose({ selectRowsDataExportEvent, tableData })
             </ElIcon>
           </template> </el-input
       ></div>
-      <div style="margin: 15px;">分组列表</div>
+      <div style="font-size: 15px;align-self: flex-start;margin-top: 15px;">分组列表</div>
       <div
         class="s-flex s-items-center"
-        style="justify-content: space-between; font-size: 15px;height: 40px;padding: 5px;"
-        :style="{ 'background-color': is_dark ? '#000' : '' }"
+        style="justify-content: space-between; font-size: 15px;height: 32px;padding: 5px;"
+        :style="{ 'background-color': is_dark ? '#000' : '#fff' }"
       >
         <div class="s-flex s-items-center" @click="clickAllGroupEvent">
           <ElIcon v-if="is_allBtn" size="17">
@@ -594,7 +595,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
         >
           <template #default="{ data }">
             <span class="custom-tree-node" @click="reqRightDataEvent(data)">
-              <div class="flex" style="justify-content: space-between; width: 100%">
+              <div class="flex" style="justify-content: space-between; width: 100;background-color:transparent">
                 <span>{{ data.name }}</span>
                 <span>{{ data.files_count }}</span>
               </div>
@@ -701,7 +702,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
         </el-tree>
       </div>
     </div>
-    <div class="s-flex" style="flex-direction: column;width: 80%;">
+    <div class="s-flex" style="flex-direction: column;width: 80%;padding-left: 10px;">
       <div class="s-flex s-justify-between">
         <ElButton class="ml-3" type="primary" @click="clickUploadRightEvent()"
           >上传{{ props.typeobj.label }}</ElButton
@@ -719,7 +720,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
               @change="timeChangeEvent"
             />
           </div>
-          <div class="ml-3">
+          <div style="margin-left: 10px;">
             <el-input
               v-model="nameFileSearch"
               class="w-40"
@@ -742,10 +743,10 @@ defineExpose({ selectRowsDataExportEvent, tableData })
                 </ElIcon>
               </template> </el-input
           ></div>
-          <ElButton type="primary" class="ml-2" @click="resetSearchEvent()">重置</ElButton>
+          <ElButton type="primary" style="margin-left: 10px;" @click="resetSearchEvent()">重置</ElButton>
         </div>
       </div>
-      <div class="s-flex s-justify-between w-100% s-items-center mt-5">
+      <div class="s-flex s-justify-between w-100% s-items-center" style="margin-top: 5px;">
         <div class="ml-3 text-3">素材总量：{{ total }}</div>
         <div class="s-row s-items-center">
           <el-select
@@ -769,7 +770,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
         </div>
       </div>
       <!-- 文件类型 -->
-      <div class="h-120 s-flex" style="flex-direction: column">
+      <div class="h-120 s-flex" style="flex-direction: column;margin-top: 8px;">
         <div v-if="is_row">
           <el-table
             height="440"
@@ -987,10 +988,10 @@ defineExpose({ selectRowsDataExportEvent, tableData })
           </div>
         </div>
         <div class="s-row" style="flex:2">
-          <div class="s-flex ml-2 mt-2 s-justify-between" style="width: 100%">
+          <div class="s-flex  s-justify-between" style="width: 100%;margin-left: 10px;margin-top: 10px;">
             <div class="s-row s-items-center">
               <div class="text-3">已选 {{ getSelectRow() }}/{{ total }}</div>
-              <ElButton class="ml-2" type="danger" @click="clickAllSelectOpearateEvent('dele')"
+              <ElButton style="margin-left: 5px;" type="danger" @click="clickAllSelectOpearateEvent('dele')"
                 >批量删除</ElButton
               >
               <ElButton @click="clickAllSelectOpearateEvent('move')">批量移动</ElButton>
@@ -1136,10 +1137,17 @@ defineExpose({ selectRowsDataExportEvent, tableData })
   --el-input-focus-border-color: transparent;
   --el-input-clear-hover-color: transparent;
   --el-input-border: 0px;
-
   box-shadow: 0 0 0 0 !important;
 }
-
+:deep(.el-input__wrapper){
+  background-color:transparent
+}
+:deep(.el-tree){
+  background-color:transparent
+}
+:deep(.el-table){
+  background-color:transparent
+}
 .custom-tree-node {
   display: flex;
   padding-right: 8px;
