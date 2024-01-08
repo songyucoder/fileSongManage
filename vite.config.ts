@@ -6,7 +6,21 @@ import path from "path"
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  build: {
+  css:{
+	//* css模块化
+	 modules: { // css模块化 文件以.module.[css|less|scss]结尾
+		 generateScopedName: '[name]__[local]___[hash:base64:5]',
+		 hashPrefix: 'prefix',
+	},
+	//* 预编译支持less
+	 preprocessorOptions: {
+		  less: {
+			// 支持内联 JavaScript
+			javascriptEnabled: true,
+		  },
+	},
+},
+  build: { 
 		outDir: "file-operate-ui", //输出文件名称
 		lib: {
 			entry: path.resolve(__dirname, "./src/components/index.js"), //指定组件编译入口文件

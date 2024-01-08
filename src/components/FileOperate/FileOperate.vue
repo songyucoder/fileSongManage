@@ -705,7 +705,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
     <div class="s-flex" style="flex-direction: column;width: 80%;padding-left: 10px;">
       <div class="s-flex s-justify-between">
         <ElButton class="ml-3" type="primary" @click="clickUploadRightEvent()"
-          >上传{{ props.typeobj.label }}</ElButton
+          >上传至{{ props.typeobj.label }}</ElButton
         >
         <div class="s-row s-items-center">
           <div class="text-4">上传时间：</div>
@@ -1107,7 +1107,7 @@ defineExpose({ selectRowsDataExportEvent, tableData })
     </el-dialog>
   </div>
 </template>
-<style lang="less" scoped>
+<style scoped lang="less">
 
 .s-flex{
   display: flex;

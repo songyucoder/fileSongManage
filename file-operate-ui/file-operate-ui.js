@@ -28916,7 +28916,7 @@ const f6 = { class: "wrapper" }, p6 = {
       }, 8, ["model"])
     ]));
   }
-}), m6 = /* @__PURE__ */ Jl(B6, [["__scopeId", "data-v-57420042"]]), RA = (e) => (Qc("data-v-ee72a538"), e = e(), Fc(), e), w6 = {
+}), m6 = /* @__PURE__ */ Jl(B6, [["__scopeId", "data-v-57420042"]]), RA = (e) => (Qc("data-v-743c4e46"), e = e(), Fc(), e), w6 = {
   class: "s-row",
   style: { width: "100%" }
 }, y6 = { class: "ml-3 mr-3 s-flex" }, C6 = /* @__PURE__ */ RA(() => /* @__PURE__ */ D("svg", {
@@ -29536,7 +29536,7 @@ const f6 = { class: "wrapper" }, p6 = {
               onClick: Y[3] || (Y[3] = (fe) => xe())
             }, {
               default: W(() => [
-                Je("上传" + we(t.typeobj.label), 1)
+                Je("上传至" + we(t.typeobj.label), 1)
               ]),
               _: 1
             }),
@@ -30054,7 +30054,7 @@ const f6 = { class: "wrapper" }, p6 = {
       ]);
     };
   }
-}), e5 = /* @__PURE__ */ Jl(Z$, [["__scopeId", "data-v-ee72a538"]]), wc = {
+}), e5 = /* @__PURE__ */ Jl(Z$, [["__scopeId", "data-v-743c4e46"]]), wc = {
   FileOperate: e5
 };
 function A5(e) {
